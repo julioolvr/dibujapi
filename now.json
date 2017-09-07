@@ -1,0 +1,8 @@
+{
+  "env": {
+    "PORT": 8000,
+    "CORS_URL": "@dibujapi-cors-url",
+    "GOOGLE_SEARCH_KEY": "@dibujapi-google-search-key",
+    "GOOGLE_CUSTOM_SEARCH_ENGINE_ID": "@dibujapi-custom-search-engine-id"
+  }
+}

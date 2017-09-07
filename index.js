@@ -5,9 +5,14 @@ const cors = require("cors");
 
 const imageSearch = require("./services/googleImageSearch");
 
-// TODO: Get origins from config
 const corsOptions = {
-  origin: ["http://localhost:3000", "http://localhost:9009"]
+  origin: (origin, cb) => {
+    const allowed = process.env.CORS_URL
+      ? process.env.CORS_URL === origin
+      : /^https?:\/\/localhost/.test(origin);
+
+    cb(null, allowed);
+  }
 };
 
 const app = express();
